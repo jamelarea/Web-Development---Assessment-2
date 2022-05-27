@@ -1,0 +1,629 @@
+* { /*selects all types of elements in an HTML page*/
+    font-family: 'Poppins', sans-serif; /*specifies the font for an element*/
+}
+
+body {
+}
+
+/*customized scroll bar*/
+/* width */
+::-webkit-scrollbar {
+    width: 3.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+.pages { /*division for the contents of navigation menu bar*/
+    float: right; /*specifies how an element should float*/
+    padding: 15px; /*used to create space around an element's content, inside of any defined borders*/
+    font-size: 18px; /*sets the size of a font*/
+}
+
+a { /*items of the navigation menu bar*/
+    background-image: linear-gradient( to right, #5178C0, #5178C0 50%, #000 50% );
+    background-size: 200% 100%;
+    background-position: -100%; /*sets the starting position of a text's background, negative (-) starts from left*/
+    display: inline-block; /*display list items horizontally instead of vertically*/
+    padding: 5px 0;
+    position: relative; /*positioned relative to its normal position*/
+    -webkit-background-clip: text; /*allows a background image to be clipped by a text element*/
+    -webkit-text-fill-color: transparent; /*specifies the fill color of characters of text*/
+    transition: all 0.3s ease-in-out; /*allows you to change property values smoothly, over a given duration*/
+    padding-left: 20px; /*sets the left padding (space) of an element*/
+    padding-right: 20px; /*sets the right padding (space) of an element*/
+}
+
+    a:before { /*:before selector inserts content before a selected element.*/
+        content: ''; /*inserts generated content*/
+        background-color: #5178C0;
+        display: block;
+        position: absolute; /*specifies the type of positioning method used*/
+        bottom: -3px; /*affects the vertical position of a positioned element*/
+        left: 0; /*affects the horizontal position of a positioned element*/
+        width: 0; /*sets the width of an element*/
+        height: 3px; /*sets the height of an element*/
+        transition: all 0.3s ease-in-out;
+    }
+
+.pages a.active { /*the page where the user is located*/
+    font-weight: bold; /*sets the weight of the font*/
+    background-color: white; /*sets the background color*/
+    color: black; /*sets the text color*/
+}
+
+a:hover { /*used to select elements when a user mouse over them*/
+    background-position: 0;
+}
+
+    a:hover::before { 
+        width: 100%;
+    }
+
+.logo { /*logo symbol (all)*/
+    position: absolute;
+    top: 16px;
+    left: 25px;
+    width: 55px;
+    height: 55px;
+}
+
+.medcare { /*logo "MedCare" name (all)*/
+    position: absolute;
+    top: 15px; /*affects the vertical position of a positioned element*/
+    left: 80px; 
+    font-size: 50px; /*sets the size of the font*/
+    font-weight: bold;
+}
+
+#quote { /*quote placed on left (home)*/
+    position: absolute;
+    top: 250px;
+    left: 55px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#appointmentbtn { /*"Book appointment" button (home)*/
+    position: absolute;
+    top: 400px;
+    left: 55px;
+    text-align: center; /*specifies the horizontal alignment of text in an element*/
+    width: 10%;
+    background-color: black;
+    color: white;
+    border-radius: 5px; /*defines the radius of the element*/
+    padding: 10px;
+    outline: none; /*no line drawn outside the button's border*/
+    border: none; /*sets the style of the button's border*/
+}
+
+    #appointmentbtn:hover {
+        width: 10%;
+        background-color: #303030;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        outline: none;
+        border: none;
+    }
+
+#learnmorebtn { /*"Learn more" button (home)*/
+    position: absolute;
+    top: 400px;
+    left: 218px;
+    text-align: center;
+    width: 10%;
+    background-color: #325a9f;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
+}
+
+    #learnmorebtn:hover {
+        width: 10%;
+        background-color: #24498a;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        outline: none;
+        border: none;
+    }
+
+/*typing text animation*/
+.containerquote { /*animated quote placed on right (home)*/
+    position: absolute;
+    top: 45%;
+    left: 77%;
+    width: 100%;
+    height: 100vh;
+    color: black;
+}
+
+.containerquote h1 { /*header 1*/
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*search button*/
+.searchengine { /*division for the search engine bar*/
+    position: absolute;
+    top: 25px;
+    left: 350px;
+    width: 100%;
+}
+
+input { /*input field (Search bar)*/
+    height: 27px; /*sets the height of input box*/
+    width: 20%;
+    border-radius: 10px;
+    border: 2px solid #d2d2d2;
+    outline: none;
+    padding: 1px 15px;
+}
+
+    input:focus { /*:focus selector is used to select the input box that user is focused on*/
+        border-color: #325a9f;
+    }
+
+button {
+    position: absolute;
+    top: 1px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#searchbtn {
+    top: -3px;
+}
+
+/*about us page*/
+#aboutheader { /*first header*/
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 11%;
+    background-image: url('medheader.png');
+    background-size: cover;
+}
+
+.aboutuscontent { /*about us content*/
+    position: absolute;
+    top: 50%;
+    margin-left: 10%; /*sets the left margin of an element*/
+    margin-right: 10%; /*sets the right margin of an element*/
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/*footer*/
+#homefooter {
+    background-color: #000;
+    color: #fff;
+    opacity: .8; /*specifies the opacity/transparency of the footer's background*/
+    height: 165px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    margin: 1px;
+    margin-top: 2%;
+    justify-content: space-around;
+    color: white;
+}
+
+/*services page*/
+#servicesheader {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 11%;
+    background-image: url('servicesheader.jpg');
+    background-size: cover;
+}
+
+.line { /*line (placed on top of the page)*/
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    border: 0;
+    height: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/*hover image animation*/
+.main-title {
+    color: #2d2d2d;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0.7em 0;
+}
+
+.container {
+    padding: 1em 0;
+    float: left;
+    width: 50%;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .container {
+        width: 33.33333%;
+    }
+}
+
+.container .title {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content {
+    position: relative;
+    width: 50%;
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+}
+
+    .content .content-overlay {
+        background: rgba(0,0,0,0.7);
+        position: absolute;
+        height: 99%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease-in-out 0s;
+        -moz-transition: all 0.4s ease-in-out 0s;
+        transition: all 0.4s ease-in-out 0s;
+    }
+
+    .content:hover .content-overlay {
+        opacity: 1;
+    }
+
+.content-image {
+    width: 100%;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-details h3 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.content-details p {
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.fadeIn-bottom {
+    top: 80%;
+}
+
+.servicetitle { /*positioning of "World class healthcare*/
+    position: absolute;
+    top: 50%;
+    left: 3.5%;
+}
+
+    .servicetitle h1 { /*heading 1*/
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: -4%
+    }
+
+    .servicetitle h3 { /*heading 2*/
+        font-weight: normal;
+    }
+
+/*services menu*/
+#anesthesia, #breastcenter, #cardiology, #dietaryclinic, #emergency { /*first row*/
+    position: absolute;
+    top: 61%;
+}
+
+#anesthesia { /*1st column*/
+    left: -5%;
+}
+
+#breastcenter { /*2nd column*/
+    left: 14.5%;
+}
+
+#cardiology { /*3rd column*/
+    left: 33.5%;
+}
+
+#dietaryclinic { /*4th column*/
+    left: 52.5%;
+}
+
+#emergency { /*5th column*/
+    right: -5%;
+}
+
+#familymedicine, #generalsurgery, #laboratory, #ophthalmology, #orthopaedics { /*second row*/
+    position: absolute;
+    top: 101%;
+}
+
+#familymedicine { /*1st column*/
+    left: -5%;
+}
+
+#generalsurgery { /*2nd column*/
+    left: 14.5%;
+}
+
+#laboratory { /*3rd column*/
+    left: 33.5%;
+}
+
+#ophthalmology { /*4th column*/
+    left: 52.5%;
+}
+
+#orthopaedics { /*5th column*/
+    right: -5%;
+}
+
+/*gallery page*/
+#galleryheader { /*gallery header*/
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 11%;
+    background-color: #325a9f;
+}
+
+.main {
+    position: absolute;
+    top: 10%;
+    height: 100vh;
+    width: 100%;
+}
+
+.main .gallery-box {
+    position: relative;
+    height: 500px;
+    width: 70%;
+    margin: 5% auto;
+    margin: 5% auto;
+    overflow: hidden;
+}
+
+.main .gallery-box .img-preview-box { /*active image*/
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+    .main .gallery-box .img-preview-box img { /*active image cover*/
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .main .gallery-box .img-thumbnails { /*images at the bottom*/
+        position: absolute;
+        height: calc(100% - 350px);
+        width: 100%;
+        display: flex;
+        transition: 0.4s ease-in-out;
+        z-index: 1;
+        bottom: -100%;
+        overflow: hidden;
+    }
+    
+    .main .gallery-box:hover .img-thumbnails { /*responsible for showing the images at the bottom*/
+        bottom: 0;
+    }
+
+    .main .gallery-box .img-thumbnails .img-thumbnail {
+        position: relative;
+        height: 100%;
+        width: calc(100% / 6);
+        overflow: hidden;
+        cursor: pointer; /*sets the mouse cursor, if any, to show when the mouse pointer is over an element*/
+    }
+
+            .main .gallery-box .img-thumbnails .img-thumbnail img { /*6 pages (bottom)*/
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /*used to specify how an <img> or <video> should be resized to fit its container*/
+            }
+
+            .main .gallery-box .img-thumbnails .img-thumbnail:hover img { /*mouseover effect*/
+                opacity: 0.85;
+            }
+
+/*contact us page*/
+#contactheader {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 11%;
+    background-image: url('contact-header.png');
+    background-size: cover;
+}
+
+.contactustitle { /*positioning of "Contact us"*/
+    position: absolute;
+    top: 50%;
+    left: 5.5%;
+}
+
+    .contactustitle h1 { /*heading 1*/
+        font-weight: bold;
+        font-size: 35px;
+        margin-bottom: -4%
+    }
+
+    .contactustitle h3 { /*heading 2*/
+        font-weight: normal;
+    }
+
+.contactus { /*input fields for contact*/
+    position: absolute;
+    top: 495px;
+    left: 90px;
+    width: 100%;
+}
+
+.contactusmsg { /*division for the message*/
+    position: absolute;
+    top: 495px;
+    left: 500px;
+    width: 100%;
+}
+
+.msg { /*input field for message*/
+    width: 350px;
+    height: 95px;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid #d2d2d2;
+    outline: none;
+    padding: 1px 15px;
+    padding-top: 5px;
+}
+
+.msg:focus { /*:focus selector is used to select the input box that user is focused on*/
+    border-color: #325a9f;
+}
+
+#contactbtn { /*button in "contact us" page*/
+    position: absolute;
+    top: 130px;
+    left: 5px;
+    text-align: center;
+    width: 10%;
+    background-color: #325a9f;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+    #contactbtn:hover {
+        width: 10%;
+        background-color: #24498a;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        outline: none;
+        border: none;
+    }
+
+.square { /*square (right side of the page)*/
+    position: absolute;
+    top: 329.5px;
+    left: 60%;
+    height: 95%;
+    width: 40%;
+    background-color: #f7f7f7;
+}
+
+.socmediaicons{ /*social media icons*/
+    position: absolute;
+    top: 130%;
+    right: 5%;
+}
+
+.generalinq { /*general inquiries title*/
+    position: absolute;
+    top: 355px;
+    left: 63%;
+}
+
+.generalinqicon { /*general inquiries icons*/
+    position: absolute;
+    top: 401px;
+    left: 65%;
+}
+
+.generalinqcontent { /*general inquiries contents*/
+    position: absolute;
+    top: 413px;
+    left: 68%;
+}
+
+.officehours { /*office hours title*/
+    position: absolute;
+    top: 650px;
+    left: 63%;
+}
+
+table { /*table for office hours*/
+    position: absolute;
+    top: 700px;
+    left: 65%;
+    border-collapse: collapse;
+    width: 31%;
+}
+
+th, td { /*th = header cells, td = data cells*/
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #c4c4c4;
+}
