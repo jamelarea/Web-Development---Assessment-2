@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" /> <!--specifies the relationship between the HTML document and the CSS document-->
+    <title>MedCare | Home</title> <!--defines the title of the document-->
+</head>
+<body style="background-image: url(background.jpg); background-size: cover; background-repeat: no-repeat; overflow: hidden; ">
+    <!--
+        background-image: specifies an image to use as the background of an element
+        background-size:  sets the size of the element's background image
+        background-repeat: the background-image is not repeated, only shown once
+        overflow: no scrollbar (both horizontal and vertical)
+    -->
+
+    <script src="script.js" type="text/javascript"></script> <!--specifies the external Javascript script file-->
+
+    <div class="searchengine"> <!--search engine bar-->
+        <input type="text" id="search" placeholder="Search.." autocomplete="off"/> <!--input field-->
+        <!--autcomplete="off" disables autocomplete (walkthough video purposes)-->
+        <button type="button" id="searchbtn"> <img src="search button.png" width="30"></button> <!--search button-->
+    </div>
+
+        <div class="pages">
+            <!--division for the pages (navigation menu bar)-->
+            <a class="active" href="home.html">Home</a> <!--the user is currently in the "home" page-->
+            <a href="aboutus.html">About us</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contactus.html">Contact us</a>
+        </div>
+
+        <img class="logo" src="logo.png" /> <!--logo symbol-->
+        <header class="medcare">Med<span style="color:#325a9f">Care</span></header> <!--logo name-->
+        <!--span is a generic inline container for phrasing content-->
+
+        <p id="quote">
+            <!--quote (left side)-->
+            Every community, <br /> <!--<br /> produces a line break in text-->
+            every neighborhood, <br />
+            every life— <span style="color: #5178C0">whole</span> and <span style="color: #5178C0">healthy.</span>
+        </p>
+
+        <!--buttons (left)-->
+        <button id="appointmentbtn" onclick="window.location.href='contactus.html'"> <!--when the user clicks the button, it brings them to the "contact us" page-->
+            <!--black button (left)-->
+            Book appointment
+        </button>
+
+        <button id="learnmorebtn" onclick="window.location.href='aboutus.html'"> <!--when the user clicks the button, it brings them to the "about" page-->
+            <!--blue button (right)-->
+            Learn more
+        </button>
+
+        <div class="containerquote">
+            <!--division for the animated quote (right)-->
+            <h1>We provide <span class="auto-type" style="color: #5178C0"></span></h1>
+        </div>
+
+        <!--internal javascript codes for text animation (animated quote)-->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            src = "https://cdn.jsdelivr.net/npm/typed.js@2.0.12"
+            var typed = new Typed(".auto-type", {
+                strings: ["Care", "Growth", "Satisfaction"],
+                typeSpeed: 150,
+                backSpeech: 150,
+                loop: true
+            })
+        </script>
+
+    <footer id="homefooter"> <!--footer-->
+        <center> <!--center-align text-->
+            <div class="row">
+                <img src="doctors.png" class="doctors" style="width: 100px" />
+                <p style="top: 5%">
+                    <span style="font-size: 35px"><b>2998</b></span> <br />
+                    Doctors
+                </p>
+
+                <img src="hospitals.png" class="hospitals" style="width: 100px" />
+                <p>
+                    <span style="font-size: 35px"><b>25</b></span> <br />
+                    Hospitals
+                </p>
+
+                <img src="countries.png" class="countries" style="width: 100px" />
+                <p>
+                    <span style="font-size: 35px"><b>8</b></span> <br />
+                    Countries
+                </p>
+
+                <img src="employees.png" class="employees" style="width: 100px" />
+                <p>
+                    <span style="font-size: 35px"><b>20790</b></span> <br />
+                    Employees
+                </p>
+
+                <img src="pharmacies.png" class="pharmacies" style="width: 100px" />
+                <p>
+                    <span style="font-size: 35px"><b>236</b></span> <br />
+                    Pharmacies
+                </p>
+
+                <img src="clinics.png" class="clinics" style="width: 100px" />
+                <p>
+                    <span style="font-size: 35px"><b>116</b></span> <br />
+                    Clinics
+                </p>
+
+            </div>
+        </center>
+    </footer>
+
+</body>
+</html>
